@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+    <link rel="stylesheet" href="enrollment.css"> <!-- Link to the external CSS file -->
+    <style>
+        /* Your existing styles here */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Student Details</h1>
+    </header>
+
+    <main>
+        <form id="applicationForm" onsubmit="submitForm(event)">
+            <!-- Your form elements here -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <div id="displayInfo" style="display: none;">
+        <!-- Display area forhf form information -->
+    </div>
+
+    <script src="enrollment.js"></script> <!-- Link to the external JavaScript file -->
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Retrieve form values
+            const studentName = document.getElementById('studentName').value;
+            const dob = document.getElementById('dob').value;
+            const enrollment = document.getElementById('enrollment').value;
+            const fees = document.getElementById('fees').value;
+            const address = document.getElementById('address').value;
+            const gender = document.getElementById('gender').value;
+            const aadhar = document.getElementById('aadhar').value;
+            const percentage = document.getElementById('percentage').value;
+
+            // Display form information
+            const displayInfoDiv = document.getElementById('displayInfo');
+            displayInfoDiv.innerHTML = `
+                <h2>Form Information</h2>
+                <p><strong>Student Name:</strong> ${studentName}</p>
+                <p><strong>Date of Birth:</strong> ${dob}</p>
+                <p><strong>Enrollment for:</strong> ${enrollment}</p>
+                <p><strong>Fees Structure:</strong> ${fees}</p>
+                <p><strong>Address:</strong> ${address}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>Aadhar Card No:</strong> ${aadhar}</p>
+                <p><strong>Percentage of Marks in School:</strong> ${percentage}</p>
+            `;
+
+            // Show the displayInfoDiv
+            displayInfoDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

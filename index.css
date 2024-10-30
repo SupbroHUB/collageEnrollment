@@ -1,0 +1,80 @@
+/* External CSS Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+    margin: 20px 0;
+}
+
+section {
+    margin: 20px 0;
+}
+.photos{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+
+    
+
+}
+.photos img{
+    height: 150px;
+    width: 160px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    display: inline-block; 
+    justify-content: space-between;
+}
+.service {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service p {
+    margin-top: 2px;
+}
+.service a:hover{
+    text-decoration: none;
+    color: rgb(226, 43, 156);
+    font-size: 1.2rem;
+}
+.service a{
+    text-decoration: none;
+}
+
+/* Add more styles as needed */
